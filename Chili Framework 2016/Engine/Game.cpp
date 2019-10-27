@@ -41,5 +41,25 @@ void Game::UpdateModel(){
 }
 
 void Game::ComposeFrame(){
-	gfx.PutPixel(300, 100, 0, 255, 0);
+	gfx.PutPixel(704, 550, 255, 255, 255);
+	gfx.PutPixel(705, 550, 255, 255, 255);
+	gfx.PutPixel(706, 550, 255, 255, 255);
+	gfx.PutPixel(707, 550, 255, 255, 255);
+
+	gfx.PutPixel(700, 545, 255, 255, 255);
+	gfx.PutPixel(700, 544, 255, 255, 255);
+	gfx.PutPixel(700, 543, 255, 255, 255);
+	gfx.PutPixel(700, 542, 255, 255, 255);
+
+	gfx.PutPixel(696, 550, 255, 255, 255);
+	gfx.PutPixel(695, 550, 255, 255, 255);
+	gfx.PutPixel(694, 550, 255, 255, 255);
+	gfx.PutPixel(693, 550, 255, 255, 255);
+
+	gfx.PutPixel(700, 553, 255, 255, 255);
+	gfx.PutPixel(700, 554, 255, 255, 255);
+	gfx.PutPixel(700, 555, 255, 255, 255);
+	gfx.PutPixel(700, 556, 255, 255, 255);
+	
+	
 }
