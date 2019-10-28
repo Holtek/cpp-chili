@@ -41,25 +41,24 @@ void Game::UpdateModel(){
 }
 
 void Game::ComposeFrame(){
-	gfx.PutPixel(704, 550, 255, 255, 255);
-	gfx.PutPixel(705, 550, 255, 255, 255);
-	gfx.PutPixel(706, 550, 255, 255, 255);
-	gfx.PutPixel(707, 550, 255, 255, 255);
+	int x;
+	int y;
 
-	gfx.PutPixel(700, 545, 255, 255, 255);
-	gfx.PutPixel(700, 544, 255, 255, 255);
-	gfx.PutPixel(700, 543, 255, 255, 255);
-	gfx.PutPixel(700, 542, 255, 255, 255);
+	x = 300;
+	y = 500;
 
-	gfx.PutPixel(696, 550, 255, 255, 255);
-	gfx.PutPixel(695, 550, 255, 255, 255);
-	gfx.PutPixel(694, 550, 255, 255, 255);
-	gfx.PutPixel(693, 550, 255, 255, 255);
+	gfx.PutPixel(x - 5 , y, 255, 255, 255);
+	gfx.PutPixel(x - 4, y, 255, 255, 255);
+	gfx.PutPixel(x - 3 , y, 255, 255, 255);
+	gfx.PutPixel(x + 3 , y, 255, 255, 255);
+	gfx.PutPixel(x + 4, y, 255, 255, 255);
+	gfx.PutPixel(x + 5, y, 255, 255, 255);
 
-	gfx.PutPixel(700, 553, 255, 255, 255);
-	gfx.PutPixel(700, 554, 255, 255, 255);
-	gfx.PutPixel(700, 555, 255, 255, 255);
-	gfx.PutPixel(700, 556, 255, 255, 255);
-	
-	
+	gfx.PutPixel(x, y - 5, 255, 255, 255);
+	gfx.PutPixel(x, y - 4, 255, 255, 255);
+	gfx.PutPixel(x, y - 3, 255, 255, 255);
+	gfx.PutPixel(x, y + 3, 255, 255, 255);
+	gfx.PutPixel(x, y + 4, 255, 255, 255);
+	gfx.PutPixel(x, y + 5, 255, 255, 255);
+
 }
