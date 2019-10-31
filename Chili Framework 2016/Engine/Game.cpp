@@ -41,24 +41,20 @@ void Game::UpdateModel(){
 }
 
 void Game::ComposeFrame() {
-	int x;
-	int y;
-
-	x = 400;
-	y = 300;
+	
 	int gb = 255;
 	
 	if (wnd.kbd.KeyIsPressed(VK_RIGHT)) {
-		x = x + 100;
+		x = x + 1;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_LEFT)) {
-		x = x - 100;
+		x = x - 1;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_DOWN)) {
-		y = y + 100;
+		y = y + 1;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_UP)) {
-		y = y - 100;
+		y = y - 1;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_CONTROL)) {
 		gb = 0;
