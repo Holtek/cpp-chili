@@ -36,44 +36,85 @@ void Game::Go(){
 }
 
 void Game::UpdateModel(){
-
-
-}
-
-void Game::ComposeFrame() {
-	
-	int gb = 255;
-	
 	if (wnd.kbd.KeyIsPressed(VK_RIGHT)) {
-		x = x + 1;
+		if (inhibitRight) {
+
+		}
+		else {
+		vx = vx + 1;
+		inhibitRight = true;
+		}
+	}
+	else {
+		inhibitRight = false;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_LEFT)) {
-		x = x - 1;
+		
+		if (inhibitRight) {
+
+		}
+		else {
+			vx = vx - 1;
+			inhibitRight = true;
+		}
+	}
+	else {
+		inhibitLeft = false;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_DOWN)) {
-		y = y + 1;
+		
+		if (inhibitDown) {
+
+		}
+		else {
+			vy = vy + 1;
+			inhibitDown = true;
+		}
+	}
+	else {
+		inhibitDown = false;
 	}
 	if (wnd.kbd.KeyIsPressed(VK_UP)) {
-		y = y - 1;
+		
+		if (inhibitUp) {
+
+		}
+		else {
+			vy = vy - 1;
+			inhibitUp = true;
+		}
 	}
+	else {
+		inhibitUp = false;
+	}
+	
 	if (wnd.kbd.KeyIsPressed(VK_CONTROL)) {
 		gb = 0;
 	}
 
-	if (wnd.kbd.KeyIsPressed(VK_SHIFT)) {
-		gfx.PutPixel(x - 5, y, 255, gb ,gb);
-		gfx.PutPixel(x - 4, y, 255, gb ,gb);
-		gfx.PutPixel(x - 3, y, 255, gb ,gb);
-		gfx.PutPixel(x + 3, y, 255, gb ,gb);
-		gfx.PutPixel(x + 4, y, 255, gb ,gb);
-		gfx.PutPixel(x + 5, y, 255, gb ,gb);
+	x = x + vx;
+	y = y + vy;
 
-		gfx.PutPixel(x, y - 5, 255, gb ,gb);
-		gfx.PutPixel(x, y - 4, 255, gb ,gb);
+	shapeIsChanged = wnd.kbd.KeyIsPressed(VK_SHIFT);
+}
+
+void Game::ComposeFrame() {
+		
+	if (shapeIsChanged){
+		gfx.PutPixel(x - 1, y, 255, gb ,gb);
+		gfx.PutPixel(x - 2, y, 255, gb ,gb);
+		gfx.PutPixel(x - 3, y, 255, gb ,gb);
+		gfx.PutPixel(x , y, 255, gb, gb);
+		gfx.PutPixel(x + 1, y, 255, gb ,gb);
+		gfx.PutPixel(x + 2, y, 255, gb ,gb);
+		gfx.PutPixel(x + 3, y, 255, gb ,gb);
+
 		gfx.PutPixel(x, y - 3, 255, gb ,gb);
+		gfx.PutPixel(x, y - 2, 255, gb ,gb);
+		gfx.PutPixel(x, y - 1, 255, gb ,gb);
+		gfx.PutPixel(x, y + 1, 255, gb ,gb);
+		gfx.PutPixel(x, y + 2, 255, gb ,gb);
 		gfx.PutPixel(x, y + 3, 255, gb ,gb);
-		gfx.PutPixel(x, y + 4, 255, gb ,gb);
-		gfx.PutPixel(x, y + 5, 255, gb ,gb);
 	}
 	else {
 		gfx.PutPixel(x - 5, y, 255, gb, gb);
