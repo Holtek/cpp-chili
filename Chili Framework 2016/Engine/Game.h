@@ -23,6 +23,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
+#include "Poo.h"
+#include "Dude.h"
 
 class Game
 {
@@ -36,27 +38,21 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
-	void DrawBox(int x, int y, int r, int g, int b);
-	bool OverlapTest(int box0x, int box0y, int box1x, int box1y);
-	int ClampScreenX(int x);
-	int ClampScreenY(int y);
-
+	void DrawFace(int x, int y);
+	void DrawPoo(int x, int y);
+	void DrawGameOver(int x, int y);
+	void DrawTitleScreen(int x, int y);
 	/********************************/
 private:
 	MainWindow& wnd;
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
-	int x_fixed0 = 200;
-	int y_fixed0 = 200;
-	int x_fixed1 = 300;
-	int y_fixed1 = 410;
-	int x_fixed2 = 400;
-	int y_fixed2 = 315;
-	int x_fixed3 = 100;
-	int y_fixed3 = 530;
-	int x_mobile = 400;
-	int y_mobile = 400;
-	bool colliding = false;
+	
+	Dude dude;
+	Poo poo0;
+	Poo poo1;
+	Poo poo2;
+	bool isStarted = false;
 	/********************************/
 };
