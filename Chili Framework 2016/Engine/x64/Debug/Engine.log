@@ -1,11 +1,10 @@
-﻿  Dude.cpp
+﻿  compilation header save succeeded; see C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\FramebufferPS.shh
+  compilation header save succeeded; see C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\FramebufferVS.shh
+  DXErr.cpp
   Game.cpp
+  Graphics.cpp
+  Keyboard.cpp
   Main.cpp
   MainWindow.cpp
-  Poo.cpp
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(35,12): error C2374: 'duderight': redefinition; multiple initialization
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(33): message : see declaration of 'duderight'
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(36,12): error C2374: 'dudebottom': redefinition; multiple initialization
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(34): message : see declaration of 'dudebottom'
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(40,12): error C2065: 'pooright': undeclared identifier
-C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\Engine\Poo.cpp(42,12): error C2065: 'poobottom': undeclared identifier
+  Mouse.cpp
+  Engine.vcxproj -> C:\Users\Holtek\Desktop\CPP-Course\Chili Framework 2016\x64\Debug\Engine.exe
